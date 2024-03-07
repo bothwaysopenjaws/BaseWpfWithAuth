@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseWpfWithAuth.Wpf", "Base
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseWpfWithAuth.DbLib", "BaseWpfWithAuth.DbLib\BaseWpfWithAuth.DbLib.csproj", "{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseWpfWithAuth.Core", "BaseWpfWithAuth.Core\BaseWpfWithAuth.Core.csproj", "{CF51BE4C-907C-438A-A055-64EF32D67F7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF51BE4C-907C-438A-A055-64EF32D67F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF51BE4C-907C-438A-A055-64EF32D67F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF51BE4C-907C-438A-A055-64EF32D67F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF51BE4C-907C-438A-A055-64EF32D67F7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

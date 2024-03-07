@@ -41,6 +41,5 @@
 		<PasswordBox x:Name="PasswordBoxLogin" Grid.Row="3" Grid.Column="2" Margin="2px" ></PasswordBox>
 		<Button x:Name="ConnectButton" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Content="Se connecter" Click="ConnectButton_Click" Margin="2px"></Button>
 
-		<Label Grid.Row="2" Grid.Column="6" Content="{Binding ErrorMessage}" Foreground="Red" ></Label>
 	</Grid>
 </Window>

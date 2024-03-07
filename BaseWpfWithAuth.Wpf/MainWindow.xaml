@@ -4,9 +4,37 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BaseWpfWithAuth.Wpf"
+        xmlns:views="clr-namespace:BaseWpfWithAuth.Wpf.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Garage Manager" Height="450" Width="800">
     <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="200"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
 
-    </Grid>
+		<Button x:Name="ButtonLeave" 
+						Grid.Column="1" 
+						Content="X" 
+						Foreground="White" Background="Red" Height="30" Width="30" FontSize="18"
+						HorizontalAlignment="Right"  VerticalAlignment="Top"
+						HorizontalContentAlignment="Center" VerticalContentAlignment="Top" />
+
+
+
+		<StackPanel Grid.Column="0" Orientation="Vertical" Background="DarkViolet" >
+			<Label
+						Grid.Row="0" Grid.Column="1" 
+						Content="Garage Manager" 
+						Foreground="White" FontSize="20"
+						HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+			<Button x:Name="ButtonHome" Content="Accueil" Height="50" Width="200" Margin="5" Click="ButtonHome_Click" />
+			<Button x:Name="ButtonGarage" Content="Garages" Height="50" Width="200" Margin="5" Click="ButtonGarage_Click" />
+			<Button x:Name="ButtonUser" Content="Utilisateurs" Height="50" Width="200" Margin="5" Click="ButtonUser_Click" />
+		</StackPanel>
+		<DockPanel x:Name="MainPanel" Grid.Column="1" >
+			<views:MainView/>
+		</DockPanel>
+
+	</Grid>
 </Window>

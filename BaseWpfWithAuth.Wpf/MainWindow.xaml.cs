@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using BaseWpfWithAuth.Wpf.Views;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,24 @@ namespace BaseWpfWithAuth.Wpf
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonHome_Click(object sender, RoutedEventArgs e)
+        {
+            MainPanel.Children.Clear();
+            MainPanel.Children.Add(new MainView());
+        }
+
+        private void ButtonGarage_Click(object sender, RoutedEventArgs e)
+        {
+            MainPanel.Children.Clear();
+            MainPanel.Children.Add(new GarageView());
+        }
+
+        private void ButtonUser_Click(object sender, RoutedEventArgs e)
+        {
+            MainPanel.Children.Clear();
+            MainPanel.Children.Add(new UserView());
         }
     }
 }
