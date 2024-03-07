@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseWpfWithAuth.Wpf", "BaseWpfWithAuth.Wpf\BaseWpfWithAuth.Wpf.csproj", "{23E2F2BD-78AD-43AF-82AF-1AA689F43AD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseWpfWithAuth.DbLib", "BaseWpfWithAuth.DbLib\BaseWpfWithAuth.DbLib.csproj", "{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23E2F2BD-78AD-43AF-82AF-1AA689F43AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23E2F2BD-78AD-43AF-82AF-1AA689F43AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23E2F2BD-78AD-43AF-82AF-1AA689F43AD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9AF62FA-BBE7-4745-A218-81D303ABB4A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseWpfWithAuth.Wpf.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,13 @@ namespace BaseWpfWithAuth.Wpf.Windows
         public WindowLogin()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
+        }
+
+        private void ConnectButton_Click(object sender, RoutedEventArgs e)
+        {
+            ((LoginViewModel)this.DataContext).Password = PasswordBoxLogin.Password;
+            ((LoginViewModel)this.DataContext).Login();
         }
     }
 }
