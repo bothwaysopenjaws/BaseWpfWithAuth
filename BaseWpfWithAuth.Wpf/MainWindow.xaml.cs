@@ -1,4 +1,6 @@
-﻿using BaseWpfWithAuth.Wpf.Views;
+﻿using BaseWpfWithAuth.DbLib.Model;
+using BaseWpfWithAuth.Wpf.ViewModel;
+using BaseWpfWithAuth.Wpf.Views;
 using BaseWpfWithAuth.Wpf.Windows;
 using Microsoft.Identity.Client;
 using System.Text;
@@ -21,10 +23,12 @@ public partial class MainWindow : Window
 {
     private Button? SelectedButton { get; set; }
 
+
     public MainWindow()
     {
         InitializeComponent();
         SelectedButton = ButtonHome;
+        this.DataContext = new MainWindowViewModel();
     }
 
     private void ButtonHome_Click(object sender, RoutedEventArgs e)
@@ -59,4 +63,7 @@ public partial class MainWindow : Window
             SelectedButton.Background = TryFindResource("MenuButtonColorSelected") as SolidColorBrush;
         
     }
+
+    private void ButtonLogout_Click(object sender, RoutedEventArgs e)
+        => ((MainWindowViewModel)this.DataContext).Logout();
 }

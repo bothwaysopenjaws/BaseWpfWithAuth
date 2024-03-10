@@ -1,4 +1,5 @@
 ﻿using BaseWpfWithAuth.DbLib.Model;
+using BaseWpfWithAuth.Wpf.Windows;
 using System.Configuration;
 using System.Data;
 using System.Windows;
@@ -29,9 +30,17 @@ public partial class App : Application
     public void Login(User user)
     {
         LoggedUser = user;
-        MainWindow mainWindow = new MainWindow();
+        MainWindow mainWindow = new();
         App.Current.MainWindow.Close();
         App.Current.MainWindow = mainWindow;
         mainWindow.Show();
+    }
+    public void Logout()
+    {
+        LoggedUser = null;
+        WindowLogin windowLogin = new();
+        App.Current.MainWindow.Close();
+        App.Current.MainWindow = windowLogin;
+        windowLogin.Show();
     }
 }

@@ -2,9 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:BaseWpfWithAuth.Wpf"
+             xmlns:converters="clr-namespace:BaseWpfWithAuth.Wpf.Converters"
              StartupUri="Windows/WindowLogin.xaml">
 	<Application.Resources>
-		<ResourceDictionary Source="./Style/Style.xaml"/>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="./Style/Style.xaml"/>
 
+			</ResourceDictionary.MergedDictionaries>
+			<converters:RoleToVisibilityConverter x:Key="RoleToVisibilityConverter"/>
+			<converters:ObjectToVisibilityConverter x:Key="ObjectToVisibilityConverter"/>
+		</ResourceDictionary>
 	</Application.Resources>
 </Application>
