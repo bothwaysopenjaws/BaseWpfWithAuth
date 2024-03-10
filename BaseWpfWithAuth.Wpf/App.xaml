@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:BaseWpfWithAuth.Wpf"
              StartupUri="Windows/WindowLogin.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+	<Application.Resources>
+		<ResourceDictionary Source="./Style/Style.xaml"/>
+
+	</Application.Resources>
 </Application>

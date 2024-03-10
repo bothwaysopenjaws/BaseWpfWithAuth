@@ -1,4 +1,6 @@
 ﻿using BaseWpfWithAuth.Wpf.Views;
+using BaseWpfWithAuth.Wpf.Windows;
+using Microsoft.Identity.Client;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,34 +12,51 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BaseWpfWithAuth.Wpf
+namespace BaseWpfWithAuth.Wpf;
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    private Button? SelectedButton { get; set; }
+
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        SelectedButton = ButtonHome;
+    }
 
-        private void ButtonHome_Click(object sender, RoutedEventArgs e)
-        {
-            MainPanel.Children.Clear();
-            MainPanel.Children.Add(new MainView());
-        }
+    private void ButtonHome_Click(object sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        MainPanel.Children.Add(new MainView());
+        ChangeSelectedButton(sender as Button);
+    }
 
-        private void ButtonGarage_Click(object sender, RoutedEventArgs e)
-        {
-            MainPanel.Children.Clear();
-            MainPanel.Children.Add(new GarageView());
-        }
+    private void ButtonGarage_Click(object sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        MainPanel.Children.Add(new GarageView());
+        ChangeSelectedButton(sender as Button);
+    }
 
-        private void ButtonUser_Click(object sender, RoutedEventArgs e)
-        {
-            MainPanel.Children.Clear();
-            MainPanel.Children.Add(new UserView());
-        }
+    private void ButtonUser_Click(object sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        MainPanel.Children.Add(new UserView());
+        ChangeSelectedButton(sender as Button);
+    }
+
+    private void ChangeSelectedButton(Button? button)
+    {
+        if (SelectedButton is not null)
+            SelectedButton.Background = TryFindResource("MenuButtonColor") as SolidColorBrush;
+
+        SelectedButton = button;
+
+        if (SelectedButton is not null)
+            SelectedButton.Background = TryFindResource("MenuButtonColorSelected") as SolidColorBrush;
+        
     }
 }

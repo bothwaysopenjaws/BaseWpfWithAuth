@@ -28,9 +28,9 @@
 						Content="Garage Manager" 
 						Foreground="White" FontSize="20"
 						HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-			<Button x:Name="ButtonHome" Content="Accueil" Height="50" Width="200" Margin="5" Click="ButtonHome_Click" />
-			<Button x:Name="ButtonGarage" Content="Garages" Height="50" Width="200" Margin="5" Click="ButtonGarage_Click" />
-			<Button x:Name="ButtonUser" Content="Utilisateurs" Height="50" Width="200" Margin="5" Click="ButtonUser_Click" />
+			<Button x:Name="ButtonHome" Content="Accueil" Height="50" Width="200" Margin="5" Click="ButtonHome_Click" Style="{StaticResource ButtonMenu}" />
+			<Button x:Name="ButtonGarage" Content="Garages" Height="50" Width="200" Margin="5" Click="ButtonGarage_Click" Style="{StaticResource ButtonMenu}" />
+			<Button x:Name="ButtonUser" Content="Utilisateurs" Height="50" Width="200" Margin="5" Click="ButtonUser_Click" Style="{StaticResource ButtonMenu}" />
 		</StackPanel>
 		<DockPanel x:Name="MainPanel" Grid.Column="1" >
 			<views:MainView/>
